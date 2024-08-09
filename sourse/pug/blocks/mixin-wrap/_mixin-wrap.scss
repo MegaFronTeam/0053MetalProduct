@@ -111,3 +111,31 @@
 	width: auto;
 	// margin-right: rem(32);
 }
+
+
+.item-card {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+  height: 100%;
+  padding: rem(20);
+  min-height: rem(140);
+	@include media-breakpoint-up(lg) {
+    padding: 0 rem(40);
+  }
+
+  border: 1px solid $gray-200;
+  border-radius: rem(20px);
+
+  &__img-wrap {
+    position: relative;
+    width: rem(60);
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+  }
+
+  img {
+    border-radius: rem(10);
+  }
+
+}

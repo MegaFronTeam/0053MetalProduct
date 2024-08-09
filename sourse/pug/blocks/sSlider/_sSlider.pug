@@ -1,0 +1,37 @@
+mixin sSliderServices(title, text)
+	+b.SECTION.sSlider.section#sSlider1&attributes(attributes)
+		.container
+			+b.section-title
+				.h1= title
+				.h6= text
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+itemCard('1', 'Ультразвуковой контроль')
+					.swiper-slide
+						+itemCard('2', 'Обработка поверхности металла')
+					.swiper-slide
+						+itemCard('3', 'Экспресс-анализ металлов и сплавов')
+					.swiper-slide
+						+itemCard('4', 'Гибка металла')
+					.swiper-slide
+						+itemCard('1', 'Ультразвуковой контроль')
+					.swiper-slide
+						+itemCard('2', 'Обработка поверхности металла')
+					.swiper-slide
+						+itemCard('3', 'Экспресс-анализ металлов и сплавов')
+					.swiper-slide
+						+itemCard('4', 'Гибка металла')
+				.arrow-wrap: +arrow
+
+mixin sSliderBrands(title, text)
+	+b.SECTION.sSlider.section#sSlider2&attributes(attributes)
+		.container
+			+b.section-title
+				.h1= title
+				.h6= text
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+itemCard('1', 'Ультразвуковой контроль')
+				.arrow-wrap: +arrow

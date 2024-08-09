@@ -44,3 +44,9 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+
+mixin itemCard(img, text)
+	+b.item-card(href='#')
+		+e.img-wrap: +img(`img/serviceSlider-${img}.png`).img-bg
+		+e.descr= text

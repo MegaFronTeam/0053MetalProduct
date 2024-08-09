@@ -56,18 +56,26 @@ function eventHandler() {
   }
 
 
-  let loadFile = function(event) {
-    console.log(event);
-    // let eventElem = event.srcElement.parentElement;
+  const serviceSwiper = new Swiper(".sSlider__slider--js", {
 
-    // eventElem.querySelector('.attach').src = URL.createObjectURL(event.target.files[0]);
-  
-    // eventElem.querySelector('.attach').classList.add("active");
-    // eventElem.classList.add("border-0")
-    // if(eventElem.querySelector(".photo-file-delete-js")) {
-    //   eventElem.querySelector(".photo-file-delete-js").classList.remove("d-none")
-    // }
-  };
+		slidesPerView: 1,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".sSlider__slider--js .swiper-button-next",
+			prevEl: ".sSlider__slider--js .swiper-button-prev",
+		},
+    breakpoints: {
+      589: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      }
+    }
+	});
 
 	new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: "auto",

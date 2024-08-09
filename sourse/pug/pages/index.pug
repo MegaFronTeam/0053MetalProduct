@@ -6,7 +6,7 @@ include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
+include ../blocks/sSlider/_sSlider.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
@@ -23,6 +23,9 @@ block pagecontent
 	+parts('header')
 	main
 		//- +headerBlock 
+		+sSliderServices('Все услуги по металлу в одном месте', 'При покупке металла у нас Вы можете заказать практических любые услуги связанные с обработкой металла')
+		+sSliderBrands('Клиенты и партнеры', 'Нам доверяют крупные компании благодаря нашим годами налаженным взаимоотношениям с поставщиками и подрядчиками')
+
 		+sForm
 		+sContact()
 		

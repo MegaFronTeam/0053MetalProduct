@@ -1,0 +1,77 @@
+// start .sSlider
+.sSlider {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	@include media-breakpoint-up(lg) {
+    max-width: rem(730);
+  }
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+
+  .swiper-slide {
+    height: auto;
+  }
+  .swiper-button-hand {
+    position: static;
+  }
+  .swiper-wrapper {
+    margin-bottom: rem(40);
+  }
+  .arrow-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(10);
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSlider
+
+
+.swiper-button-hand {
+  --swiperArrowSize: #{rem(40)};
+  background-color: var(--swiperBgDef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $dark;
+  box-shadow: none;
+  color: var(--swiperColorDef);
+  --s: 0.36s;
+  .icon {
+    @include mt;
+    --s: 0.36s;
+    fill: none;
+    stroke: $dark;
+    stroke-width: 2px;
+  }
+
+  &:not(.swiper-button-disabled):hover .icon {
+    stroke: $primary;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: .5;
+  &:hover {
+    border-color: $dark;
+  }
+}
