@@ -1,0 +1,99 @@
+// start .sPromo
+.sPromo {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(40)};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(20)};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		&:first-child {
+      .logo {
+        position: absolute;
+        bottom: var(--card-padding);
+        left: var(--card-padding);
+      }
+    }
+		&:last-child {
+      .logo {
+        position: absolute;
+        top: var(--card-padding);
+        right: var(--card-padding);
+      }
+      .sPromo__img-wrap img {
+        padding-bottom: rem(40);
+      }
+    }
+	}
+	&__item {
+    --card-padding: 5vw;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: rem(12);
+    height: 100%;
+    padding: var(--card-padding);
+    padding-right: 4vw;
+    background: $dark;
+    color: $white;
+
+    &.item_gray {
+      background: #3E3E3E;
+    }
+    @include media-breakpoint-up(lg) {
+      border-radius: rem(20);
+    }
+    @include media-breakpoint-up(xl) {
+      --card-padding: 90px;
+      // padding-right: rem(60);
+      padding-bottom: rem(80);
+    }
+	}
+
+  &__btn {
+    --bs-btn-padding-y: #{rem(20)};
+    --bs-btn-padding-x: #{rem(30)};
+  }
+
+  &__img-wrap {
+    // position: relative;
+    height: rem(200);
+    @include media-breakpoint-up(xl) {
+      height: rem(250);
+
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(-50);
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-width: 70%;
+      max-height: 60%;
+    }
+  }
+
+  .map {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPromo

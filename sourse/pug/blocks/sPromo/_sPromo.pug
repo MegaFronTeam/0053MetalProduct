@@ -1,0 +1,23 @@
+mixin sPromo(data)
+	// start sPromo
+	+b.SECTION.sPromo.section#sPromo&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-lg-6
+					+e.item
+						+b.section-title
+							.h1 О компании
+							.h6 О ключевых принципах компании, этапы работы и подробная информация об организации МеталлПродукт
+						+e.btn.btn.btn-outline-light(href='#') Подробнее
+						+e.img-wrap: +img("img/sPromo-1.png")
+						+img("img/svg/logo-cut.svg").logo
+				+e.col.col-lg-6
+					+e.item.item_gray
+						+b.section-title
+							.h1 Доставка и<br>оплата
+							.h6 Информация о способах доставки, список транспортных компаний и информация о способах оплаты продукции и услуг
+						+e.btn.btn.btn-outline-light(href='#') Подробнее
+						+e.img-wrap: +img("img/sPromo-2.png")
+						+img("img/svg/logo-cut.svg").logo
+						+img("img/svg/map.svg").map
+	// end sPromo

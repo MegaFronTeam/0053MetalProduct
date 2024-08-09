@@ -9,17 +9,16 @@
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title{
-		
-	@include media-breakpoint-up(lg) {
-    max-width: rem(730);
+    @include media-breakpoint-up(lg) {
+      max-width: rem(730);
+    }
+	}
+
+  &#sSlider2 {
+    .swiper-wrapper{
+      margin-bottom: rem(60);
+    }
   }
-	}
-	&__col{
-		
-	}
-	&__item{
-		
-	}
 
   .swiper-slide {
     height: auto;

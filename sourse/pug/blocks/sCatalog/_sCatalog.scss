@@ -11,6 +11,27 @@
 	.section-title{
 		
 	}
+  span {
+    font-size: 48px;
+    text-transform: uppercase;
+    @include media-breakpoint-up(lg) {
+    font-size: 100px;
+    }
+  }
+  .search-block {
+    max-width: rem(770);
+    margin: auto;
+    margin-bottom: rem(60);
+  }
+
+  h1 {
+    margin-bottom: rem(32);
+  }
+
+  .h6 {
+    max-width: rem(765);
+    margin: auto;
+  }
 	&__col{
 
 	}

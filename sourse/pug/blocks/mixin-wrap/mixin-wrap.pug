@@ -27,10 +27,10 @@ mixin addblock()
 
 mixin search()
 	+b.search-block
+		+icon("search")
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти" inputmode='search')
-			button 
-				+icon("search")
+			input(type="text" placeholder="Найти по материалу, ГОСТ или марке" inputmode='search')
+			button.btn.btn-primary Искать
 
 mixin page-head(t,...items)
 	+b.page-head
@@ -49,4 +49,5 @@ mixin parts(elem)
 mixin itemCard(img, text)
 	+b.item-card(href='#')
 		+e.img-wrap: +img(`img/serviceSlider-${img}.png`).img-bg
-		+e.descr= text
+		if text
+			+e.descr= text

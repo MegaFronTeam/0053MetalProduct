@@ -56,7 +56,7 @@ function eventHandler() {
   }
 
 
-  const serviceSwiper = new Swiper(".sSlider__slider--js", {
+  const serviceSwiper = new Swiper("#sSlider1 .sSlider__slider--js", {
 
 		slidesPerView: 1,
 		spaceBetween: 20,
@@ -73,6 +73,27 @@ function eventHandler() {
       },
       1200: {
         slidesPerView: 4,
+      }
+    }
+	});
+
+  const brandSwiper = new Swiper("#sSlider2 .sSlider__slider--js", {
+
+		slidesPerView: 2,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".sSlider__slider--js .swiper-button-next",
+			prevEl: ".sSlider__slider--js .swiper-button-prev",
+		},
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+      },
+      // 992: {
+      //   slidesPerView: 5,
+      // },
+      1200: {
+        slidesPerView: 6,
       }
     }
 	});

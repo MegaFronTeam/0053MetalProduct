@@ -33,5 +33,31 @@ mixin sSliderBrands(title, text)
 			+e.slider--js.swiper
 				.swiper-wrapper
 					.swiper-slide
-						+itemCard('1', 'Ультразвуковой контроль')
+						+brandCard('1')
+					.swiper-slide
+						+brandCard('2')
+					.swiper-slide
+						+brandCard('3')
+					.swiper-slide
+						+brandCard('4')
+					.swiper-slide
+						+brandCard('5')
+					.swiper-slide
+						+brandCard('6')
+					.swiper-slide
+						+brandCard('1')
+					.swiper-slide
+						+brandCard('2')
+					.swiper-slide
+						+brandCard('3')
+					.swiper-slide
+						+brandCard('4')
+					.swiper-slide
+						+brandCard('5')
+					.swiper-slide
+						+brandCard('6')
 				.arrow-wrap: +arrow
+
+mixin brandCard(img)
+	+b.item-card(href='#').--brand
+		+img(`img/svg/brandSlider-${img}.svg`)
