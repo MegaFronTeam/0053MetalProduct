@@ -2,8 +2,27 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				+e.col.col-lg-6
+					+e.item
+						a(href='mailto:info@metal-prod.ru').title info@metal-prod.ru
+						+e.address г. Москва, ул. Зорге, д. 22а (Бизнес-центр "Сокол Бридж")
+						+e.work-hours.text-secondary
+							p Пт-Пт: с 9:00 до 18:00
+							p Сб-Вс: выходной
+						+e.btn.btn.btn-outline-dark.btn-sm(href='#')
+							+icon('location')
+							| Посмотреть на карте
+				+e.col.col-lg-6
+					+e.item
+						.title.text-secondary Контактный телефон
+						a(href='tel:+74953456789').span +7 (495) 345-67-89
+						.social-links
+							a(href='#')
+								+icon('telegram')
+								| Написать в Telegram
+							a(href='#')
+								+icon('phone')
+								| Написать в WhatsApp
+						+e.btn.btn.btn-outline-dark.btn-sm(href='#') Заказать звонок
 	// end sContact

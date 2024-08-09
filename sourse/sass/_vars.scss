@@ -450,10 +450,10 @@ $body-emphasis-color:       $black !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              $dark;
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-color:                        shift-color($primary, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -487,7 +487,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1600px
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -505,7 +505,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px
+  xxl: 1500px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -517,7 +517,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           rem(20);
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -635,7 +635,7 @@ $h2-font-size:                rem(45);
 $h3-font-size:                rem(38);
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                rem(26);
-$h6-font-size:                $font-size-base !default;
+$h6-font-size:                rem(20);
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -823,9 +823,9 @@ $btn-font-size:               rem(20);
 $btn-line-height:             1;
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-$btn-font-size-sm:            $input-btn-font-size-sm !default;
+$btn-padding-y-sm:            rem(15);
+$btn-padding-x-sm:            rem(20);
+$btn-font-size-sm:            rem(18);
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
@@ -847,7 +847,7 @@ $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-colo
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           rem(12);
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
+$btn-border-radius-sm:        rem(10);
 $btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;

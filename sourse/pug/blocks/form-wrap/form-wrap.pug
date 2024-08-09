@@ -63,7 +63,12 @@ mixin add-file(n)
 		+e.SPAN.filename 
 
 
+//- mixin policy()
+//- 	+e.policy
+//- 		+in-c()(checked)
+//- 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
 mixin policy()
-	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	.policy
+		+e.SMALL При нажатии на кнопку “Отправить” вы даете свое согласие, что ознакомились с условиями 
+			a(href='#') обработки персональных данных

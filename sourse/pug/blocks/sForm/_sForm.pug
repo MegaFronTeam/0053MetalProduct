@@ -1,16 +1,31 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.SECTION.sForm.sForm_black.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("Ваше имя",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Показать каталог продукции
-				+policy
+			+b.hide
+				+e.icon-wrap: +icon('close')
+				+e.text.text-secondary Свернуть
+			.cont-inner
+				+img('img/sForm-1.png').img-1
+				+img('img/sForm-2.png').img-2
+				+e.inner-wrap
+					+b.section-title.text-center
+						.h1 Заявка на быстрый расчет
+						.h6.fw-400 Свяжитесь с нами для получения консультации или чтобы оперативно рассчитать заявку на покупку продукции или оказание услуг
+					+e.row.row
+					+form-wrap
+						+input("Ваше имя",'text')
+						+input("Ваш телефон",'tel')
+						+input("Ваш email",'email')
+						+input("Комментарий к заявке", 'textarea', '')
+						+b.LABEL.add-file
+							input(type="file", name="")
+							+e.wrap
+								.attach
+									+icon('attach')
+									| Прикрепить файл
+								.attach-text#fileName
+						//- +e.btn.btn.btn-primary(type="submit") Прикрепить файл
+						+e.btn.btn.btn-primary(type="submit") Отправить
+					.text-center: +policy
 	// end sForm

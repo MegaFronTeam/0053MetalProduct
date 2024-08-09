@@ -1,9 +1,29 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				+e.col.col-12.col-md-3
+					+e.logo(href='/')
+						+img('img/svg/logo.svg')
+				.col-md.fw-500
+					ul
+						li: a(href="#") Каталог продукции
+						li: a(href="#") Услуги
+				.col-md.fw-500
+					ul
+						li: a(href="#") О компании
+						li: a(href="#") Доставка и оплата
+				.col-md.fw-500
+					ul
+						li: a(href="#") Документы
+						li: a(href="#") Контакты
+				+e.last-col.col-sm-auto
+					ul
+						li: a(href='tel:+74953456789') +7 (495) 345-67-89
+						li: a(href='mailto:info@metal-prod.ru') info@metal-prod.ru
+			+e.contacts ООО «МеталлПродукт» <br>ИНН 632504103565<br>ОГРН 320645100028599
+			+e.item
+				a(href="#") Политика конфиденциальности
+				p © МеталлПродукт 2022. Все права защищены.
+				p Разработка сайта – 
+					a(href="#") #[span Artsman]

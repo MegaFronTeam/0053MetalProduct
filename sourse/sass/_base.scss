@@ -472,3 +472,24 @@ iframe {
 		object-fit: cover;
 	}
 }
+.section-title{
+	.h1, h2, .h2 {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  .h6, h6 {
+    line-height: 1.5;
+  }
+}
+
+.btn-sm {
+//   --bs-btn-padding-y: rem(15);
+//   --bs-btn-padding-x: rem(20);
+//   --bs-btn-font-size: rem(18);
+  // --bs-btn-border-radius: 10;
+  .icon  {
+    margin-right: rem(10);
+  }
+}

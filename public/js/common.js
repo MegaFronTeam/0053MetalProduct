@@ -42,6 +42,32 @@ function eventHandler() {
 			// }
 		},
 	};
+  
+  const addFile = document.querySelector('.add-file')
+  const fileName = document.querySelector('#fileName')
+  if (addFile) {
+    addFile.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        addFile.classList.add('active')
+        fileName.textContent = file.name;
+      }
+    })
+  }
+
+
+  let loadFile = function(event) {
+    console.log(event);
+    // let eventElem = event.srcElement.parentElement;
+
+    // eventElem.querySelector('.attach').src = URL.createObjectURL(event.target.files[0]);
+  
+    // eventElem.querySelector('.attach').classList.add("active");
+    // eventElem.classList.add("border-0")
+    // if(eventElem.querySelector(".photo-file-delete-js")) {
+    //   eventElem.querySelector(".photo-file-delete-js").classList.remove("d-none")
+    // }
+  };
 
 	new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: "auto",
