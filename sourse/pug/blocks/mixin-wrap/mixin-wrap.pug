@@ -51,3 +51,11 @@ mixin itemCard(img, text)
 		+e.img-wrap: +img(`img/serviceSlider-${img}.png`).img-bg
 		if text
 			+e.descr= text
+
+
+mixin navBar
+	+b.nav-bar
+		+e.item.btn-top--js: +icon('up')
+		+e.item
+			
+		+e.item.item_yellow(href='#'): +icon('cart')

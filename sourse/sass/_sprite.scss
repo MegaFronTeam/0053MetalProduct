@@ -17,6 +17,16 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
+.icon-cart {
+	$h: 30;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(30 / #{$h} *1em );
+}
+.icon-catalog {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
 .icon-check {
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -63,6 +73,11 @@
 	width: calc(20 / #{$h} *1em );
 }
 .icon-telegram {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.icon-up {
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );

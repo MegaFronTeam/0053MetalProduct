@@ -55,6 +55,13 @@ function eventHandler() {
     })
   }
 
+  const navToTop = document.querySelector(".btn-top--js")
+
+  if(navToTop) {
+    navToTop.addEventListener("click", () => {
+      window.scrollTo(0, 0);
+    });
+  }
 
   const serviceSwiper = new Swiper("#sSlider1 .sSlider__slider--js", {
 

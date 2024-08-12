@@ -2,10 +2,24 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.inner-wrap
+				+e.row.row
+					+e.col.col-lg-7
+						+b.section-title
+							h1 Надежный поставщик металла от лучших производителей
+							h6 Металл, ППУ, металлоконструкции, пластик, электрика, изготовление деталей по чертежам, логистика и монтаж по всей России
+						+e.btn.btn.btn-primary(href='#') Показать каталог продукции
+					+e.col.col-lg-5
+						+e.img-wrap: +img('img/sHeaderBlock-bg.png').img
+			+e.item
+				+featureItem(1, 'Поставка черного, нержавеющего и цветного металлопроката')
+				+featureItem(2, 'Изготовление деталей любой сложности по чертежам')
+				+featureItem(3, 'Изготовление предизолированных труб (ППУ)')
+				+featureItem(4, 'Изготовление и монтаж металлоконструкций любой сложности')
+	
 	// end headerBlock
+
+mixin featureItem(img, text)
+	+b.feature-item
+		+img(`img/svg/feature-${img}.svg`)
+		+e.text= text
